@@ -81,6 +81,33 @@ Supabase Setup (Steps)
 
   Production: your Vercel URL
 
+Challenges & How I Solved Them
+
+1. Google OAuth redirecting to localhost on Vercel
+Problem: After Google login, the app redirected to `http://localhost:3000` in production.  
+Solution:  
+- Updated Supabase Site URL and Redirect URLs to the Vercel domain  
+- Set the OAuth `redirectTo` URL correctly in the frontend  
+- Redeployed the app on Vercel  
+
+2. Supabase environment variables not working on Vercel
+Problem: Supabase connection failed in production even though it worked locally.  
+Solution:  
+- Added `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel Environment Variables  
+- Redeployed the project to apply the new env values  
+
+3. Real-time updates not triggering correctly
+Problem: Bookmark list did not update across tabs.  
+Solution:  
+- Configured Supabase Realtime channels using `postgres_changes`  
+- Subscribed and unsubscribed properly in React `useEffect`  
+
+4. Row Level Security blocking data access  
+Problem: After enabling RLS, bookmarks were not visible or insert/delete operations failed.  
+Solution:  
+- Added proper RLS policies using `auth.uid() = user_id` for select, insert, and delete  
+
+
 Author
 
 Ankitha
