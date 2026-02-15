@@ -44,8 +44,14 @@ export default function Home() {
   }, [])
 
   const login = async () => {
-    await supabase.auth.signInWithOAuth({ provider: "google" })
-  }
+  await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: "https://smart-bookmark-r1769rrdl-ankitha290603s-projects.vercel.app",
+    },
+  })
+}
+
 
   const logout = async () => {
     await supabase.auth.signOut()
