@@ -1,65 +1,83 @@
 # Smart Bookmark App
 
-Smart Bookmark is a full-stack web application that allows users to save and manage bookmarks securely. Users sign in with Google, and each user can only view and manage their own bookmarks.
-
-## Features
-- Google OAuth authentication
-- Add and delete bookmarks (title + URL)
-- User-specific private data (Row Level Security)
-- Real-time updates
-- Responsive UI
-
-## Tech Stack
-- Next.js (TypeScript, App Router)
-- Supabase (PostgreSQL, Auth, Realtime)
-- Tailwind CSS
-- Deployed on Vercel
+Smart Bookmark is a full-stack web application that allows users to save and manage bookmarks securely.  
+Users sign in with Google, and each user can only view and manage their own bookmarks.
 
 ## Live Demo
-https://your-vercel-url.vercel.app
 
-## How to Run Locally
+👉 https://smart-bookmark-86ot34p7p-ankitha290603s-projects.vercel.app
 
-### 1. Clone the repository
-```bash
+## Features
+
+- Google OAuth authentication  
+- Add and delete bookmarks (title + URL)  
+- User-specific private data (Row Level Security)  
+- Real-time updates across tabs  
+- Responsive UI  
+
+## Tech Stack
+
+- Next.js (TypeScript, App Router)  
+- Supabase (PostgreSQL, Auth, Realtime)  
+- Tailwind CSS  
+- Vercel (Deployment)  
+
+##  How to Run Locally
+
+1. Clone the repository:
 git clone https://github.com/Ankitha290603/smart-bookmark-app.git
 cd smart-bookmark-app
 
-2. Install dependencies
+2.Install dependencies:
+
 npm install
 npm run dev
 
-3. Environment Setup
+
+3.Environment setup:
 
 Create a .env.local file in the project root:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-4. Open the app
+4.Open the app:
 
 Visit: http://localhost:3000
 
 Supabase Setup (Steps)
 
-Create a Supabase project
+1.Create a Supabase project
 
-Create a bookmarks table with columns:
-id, created_at, user_id, title, url
+2.Create a bookmarks table with columns:
 
-Enable Row Level Security (RLS)
+  id
 
-Add policies:
+  created_at
 
-Select: auth.uid() = user_id
+  user_id
 
-Insert: auth.uid() = user_id
+  title
 
-Delete: auth.uid() = user_id
+  url
 
-Enable Google OAuth provider
+3.Enable Row Level Security (RLS)
 
-Add redirect URLs for local and production
+4.Add policies:
+
+   Select: auth.uid() = user_id
+
+   Insert: auth.uid() = user_id
+
+   Delete: auth.uid() = user_id
+
+5.Enable Google OAuth provider
+
+6.Add redirect URLs for:
+
+  Local: http://localhost:3000
+
+  Production: your Vercel URL
 
 Author
 
