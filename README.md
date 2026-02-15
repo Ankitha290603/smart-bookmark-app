@@ -24,24 +24,24 @@ Users sign in with Google, and each user can only view and manage their own book
 
 ##  How to Run Locally
 
-1.Clone the repository:
+1. Clone the repository:
 git clone https://github.com/Ankitha290603/smart-bookmark-app.git
 cd smart-bookmark-app
 
-2.Install dependencies:
+2. Install dependencies:
 
-npm install
-npm run dev
+   npm install
+   npm run dev
 
 
-3.Environment setup:
+3. Environment setup:
 
 Create a .env.local file in the project root:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-4.Open the app:
+4. Open the app:
 
 Visit: http://localhost:3000
 
