@@ -31,14 +31,16 @@ cd smart-bookmark-app
 2. Install dependencies:
 
    npm install
+   
    npm run dev
 
 
-3. Environment setup:
+4. Environment setup:
 
 Create a .env.local file in the project root:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 4. Open the app:
