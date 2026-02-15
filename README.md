@@ -24,7 +24,7 @@ Users sign in with Google, and each user can only view and manage their own book
 
 ##  How to Run Locally
 
-1. Clone the repository:
+1.Clone the repository:
 git clone https://github.com/Ankitha290603/smart-bookmark-app.git
 cd smart-bookmark-app
 
